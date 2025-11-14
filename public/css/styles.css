@@ -1,0 +1,382 @@
+body {
+    background-image: url('/images/bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(1, 255, 230);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+    width: 500px;
+    height: 600px;
+    min-height: 500px;
+    min-width: 300px;
+    overflow: scroll;
+}
+
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    position: sticky;
+    top: 22px;
+
+}
+
+.card form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin: 10px;
+    position: sticky;
+    bottom: 10px;
+}
+
+.list-container .items {
+    font-size: 1rem;
+    text-align: start;
+}
+
+.items .todo {
+    margin-right: 5px;
+}
+
+#task,
+#editTask {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: large;
+    margin-right: 10px;
+    color: magenta;
+}
+
+#task::placeholder,
+#editTask::placeholder {
+    color: magenta;
+}
+
+#task-add-btn,
+#task-edit-btn {
+    width: 50px;
+    border-radius: 100%;
+    font-size: x-large;
+    color: magenta;
+}
+
+.edit,
+.del {
+    font-size: large;
+    margin: 2px;
+    cursor: pointer;
+    background: none;
+    color: rgb(1, 255, 230);
+    border: 2px groove;
+    border-radius: 10px;
+    float: right;
+}
+
+.edit:hover,
+.del:hover {
+    background-color: rgb(1, 255, 230);
+    color: #000;
+    border-radius: 10px;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url('/images/bg-img.jpg');
+        background-size: contain;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(1, 255, 230);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .card {
+        width: 500px;
+        height: 600px;
+        min-height: 500px;
+        min-width: 300px;
+        overflow: scroll;
+    }
+
+    .heading {
+        text-align: center;
+        text-decoration: underline;
+        position: sticky;
+        top: 22px;
+
+    }
+
+    .card form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        margin: 10px;
+        position: sticky;
+        bottom: 10px;
+    }
+
+    .list-container .items {
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    .items .todo {
+        margin-right: 5px;
+    }
+
+    #task,
+    #editTask {
+        width: 500px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: large;
+        margin-right: 10px;
+        color: magenta;
+    }
+
+    #task::placeholder,
+    #editTask::placeholder {
+        color: magenta;
+    }
+
+    #task-add-btn,
+    #task-edit-btn {
+        width: 50px;
+        border-radius: 100%;
+        font-size: x-large;
+        color: magenta;
+    }
+
+    .edit,
+    .del {
+        font-size: large;
+        margin: 2px;
+        cursor: pointer;
+        background: none;
+        color: rgb(1, 255, 230);
+        border: 2px groove;
+        border-radius: 10px;
+        float: right;
+    }
+
+    .edit:hover,
+    .del:hover {
+        background-color: rgb(1, 255, 230);
+        color: #000;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-image: url('/images/bg-img.jpg');
+        background-size: contain;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(1, 255, 230);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .card {
+        width: 450px;
+        height: 600px;
+        min-height: 500px;
+        min-width: 300px;
+        overflow: scroll;
+    }
+
+    .heading {
+        text-align: center;
+        text-decoration: underline;
+        position: sticky;
+        top: 22px;
+
+    }
+
+    .card form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        margin: 10px;
+        position: sticky;
+        bottom: 10px;
+    }
+
+    .list-container .items {
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .items .todo {
+        margin-right: 10px;
+        margin-bottom: 25px;
+    }
+
+    .todo .strike-todo {
+        display: block;
+    }
+
+    #task,
+    #editTask {
+        width: 500px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: large;
+        margin-right: 10px;
+        color: magenta;
+    }
+
+    #task::placeholder,
+    #editTask::placeholder {
+        color: magenta;
+    }
+
+    #task-add-btn,
+    #task-edit-btn {
+        width: 50px;
+        border-radius: 100%;
+        font-size: x-large;
+        color: magenta;
+    }
+
+    .edit,
+    .del {
+        font-size: large;
+        margin: 2px;
+        cursor: pointer;
+        background: none;
+        color: rgb(1, 255, 230);
+        border: 2px groove;
+        border-radius: 10px;
+        float: right;
+    }
+
+    .edit:hover,
+    .del:hover {
+        background-color: rgb(1, 255, 230);
+        color: #000;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: url('/images/bg-img.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(1, 255, 230);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .card {
+        width: 450px;
+        height: 600px;
+        min-height: 500px;
+        min-width: 300px;
+        overflow: scroll;
+    }
+
+    .heading {
+        text-align: center;
+        text-decoration: underline;
+        position: sticky;
+        top: 22px;
+
+    }
+
+    .card form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+        margin: 10px;
+        position: sticky;
+        bottom: 10px;
+    }
+
+    .list-container .items {
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .items .todo {
+        /* margin-right: 10px;
+        margin-bottom: 25px; */
+        margin: 25px;
+    }
+
+    .todo .strike-todo {
+        display: block;
+    }
+
+    #task,
+    #editTask {
+        width: 500px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: large;
+        margin-right: 10px;
+        color: magenta;
+    }
+
+    #task::placeholder,
+    #editTask::placeholder {
+        color: magenta;
+    }
+
+    #task-add-btn,
+    #task-edit-btn {
+        width: 50px;
+        border-radius: 100%;
+        font-size: x-large;
+        color: magenta;
+    }
+
+    .edit,
+    .del {
+        font-size: large;
+        margin: 2px;
+        cursor: pointer;
+        background: none;
+        color: rgb(1, 255, 230);
+        border: 2px groove;
+        border-radius: 10px;
+        float: right;
+    }
+
+    .edit:hover,
+    .del:hover {
+        background-color: rgb(1, 255, 230);
+        color: #000;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script/script.js"></script>
+    <title>TODO List</title>
+</head>
+
+<body>
+    <div class="todo-list">
+        <div class="heading">
+            <h1>TODO List</h1>
+        </div>
+
+        <div class="card">
+            <div class="list-container">
+                <div class="items">
+                    <% tasks.forEach((ele, i)=> { %>
+                        <p class="todo">
+                            <span class="strike-todo">
+                                <%= i + 1 %>. <%= ele %>
+                            </span>
+                            <button class="edit" onclick="editTodo('<%= ele %>', '<%= i %>')">
+                                Edit
+                            </button>
+                            <button class="del" onclick="deleteTodo('<%= ele %>')">
+                                Del
+                            </button>
+                        </p>
+                        <% }); %>
+                </div> 
+
+                <form action="/" method="post" id="createForm">
+                    <input type="text" name="task" id="task" placeholder="Enter your task here..." onkeyup="detectChanges(event, 'add')"/>
+                    <button id="task-add-btn" type="submit">+</button>
+                </form>
+
+                <form action="/update-todo" method="post" id="updateForm">
+                    <input type="text" name="editTask" id="editTask" placeholder="Enter your task here..." onkeyup="detectChanges(event, 'edit')" />
+                    <input type="text" name="editIndex" id="editIndex" hidden/>
+                    <button id="task-edit-btn" type="submit">
+                        <ion-icon name="create-outline"></ion-icon>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.taskArr = `<%- JSON.stringify(tasks) %>`;
+    </script>
+</body>
+
+</html>
