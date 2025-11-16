@@ -5,13 +5,15 @@ const app = express();
 app.set("view engine", "ejs");      //This line is used to enable Express to automatically handle the rendering of 
 //EJS template files when I use res.render().
 
+const port = process.env.port || 8000;
+
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 let taskList = [];
 
-app.listen(8000, (req, res) => {
+app.listen(port, (req, res) => {
     console.log("Server started successfully.");
 });
 
